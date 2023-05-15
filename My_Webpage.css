@@ -1,0 +1,216 @@
+/*Policy*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+
+/*Colors declaration*/
+:root{
+    --primary--color: #fff;
+    --secondary--color: #333;
+    --main--color: #f16a57;
+}
+
+
+/*Body display*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: var(--primary--color);
+    overflow-x: hidden;
+    color: var(--secondary--color);
+}
+
+
+/*Header display*/
+header{
+    position: fixed;
+    padding: 20px 7%;
+    display: flex;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    align-items: center;
+}
+.logo{
+    margin-right: auto;
+    font-size: 30px;
+    color: var(--main--color);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+}
+.navbar a{
+    color: var(--primary--color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 25px;
+    font-size: 18px;
+    position: relative;
+}
+.navbar a.active::before{
+    position: absolute;
+    bottom: -6px;
+    width: 100%;
+    left: 0;
+    height: 2.8px;
+    background-color: var(--primary--color);
+    content: '';
+}
+.navbar a::after{
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom:-6px;
+    width: 0;
+    height: 2.8px;
+    background-color: white;
+    border-radius: 8px;
+    transition: all ease 0.45s;
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+.mode{
+    font-size: 25px;
+    vertical-align: middle;
+    cursor: pointer;
+    color: var(--primary--color);
+}
+
+
+/*Home display*/
+    /*Left home display*/
+.home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 7% 0;
+}
+.home .home_content{
+    max-width: 440px;
+}
+.home_content h3{
+    font-size: 32px;
+}
+.home_content h1{
+    font-size: 51px;
+    color: var(--main--color);
+    font-weight: 700;
+}
+.home_content p{
+    font-size: 16px;
+    margin-top: 3px;
+}
+.social_media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: solid 2px var(--main--color);
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .2);
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 25px 15px 30px 0;
+    color: var(--secondary--color);
+}
+.social_media a:hover{
+    background-color: var(--main--color);
+    transform: scale(1.25);
+    transition: all ease .7s;
+    color: var(--primary--color);
+}
+.button{
+    padding: 10px 30px;
+    text-decoration: none;
+    border: 2px solid var(--main--color);
+    border-radius: 10px;
+    color: var(--primary--color);
+    font-weight: 700;
+    background-color: var(--main--color);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .2);
+}
+.button:hover{
+    background-color: transparent;
+    transform: scale(1.1);
+    transition: all ease .7s;
+    color: var(--secondary--color);
+    border-color: var(--main--color);
+}
+
+    /*Right home display*/
+.home .personal_container{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 770px;
+    height: 770px;
+    /* background-color: var(--main--color); */
+    overflow: hidden;
+}
+.personal_container .personal_box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: var(--main--color); */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.personal_box .tools{
+    position: absolute;
+    transform: rotate(calc(360deg / 3 * var(--i)));
+    transform-origin: 384px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--main--color);
+    background-color: var(--primary--color);
+    padding: 13px 0;
+}
+.personal_box .tools:nth-child(1) i{
+    margin-right: 15px;
+}
+.tools i{
+    font-size: 38px;
+}
+.tools h3{
+    font-size: 32px;
+    font-weight: 600;
+}
+.personal_box .circle{
+    width: 72%;
+    height: 72%;
+    border: 3px solid var(--main--color);
+    border-radius: 50%;
+}
+.personal_container .overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 385px solid var(--main--color);
+    border-bottom: 385px solid var(--main--color);
+    border-left: 385px solid transparent;
+    border-right: 385px solid var(--main--color);
+}
+.home_img{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+
