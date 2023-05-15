@@ -41,6 +41,8 @@ header{
     cursor: pointer;
     text-decoration: none;
     font-weight: 600;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
 }
 .navbar a{
     color: var(--primary--color);
@@ -95,15 +97,21 @@ header{
 }
 .home_content h3{
     font-size: 32px;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .7s;
 }
 .home_content h1{
     font-size: 51px;
     color: var(--main--color);
     font-weight: 700;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
 }
 .home_content p{
     font-size: 16px;
     margin-top: 3px;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
 }
 .social_media a{
     display: inline-flex;
@@ -119,7 +127,35 @@ header{
     text-decoration: none;
     margin: 25px 15px 30px 0;
     color: var(--secondary--color);
+    animation: slideLeftt 1s ease forwards;
+    animation-delay: 1s;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
 }
+
+/*Keyframes animation*/ 
+@keyframes slideRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
 .social_media a:hover{
     background-color: var(--main--color);
     transform: scale(1.25);
@@ -135,6 +171,8 @@ header{
     font-weight: 700;
     background-color: var(--main--color);
     box-shadow: 0px 2px 5px rgba(0, 0, 0, .2);
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
 }
 .button:hover{
     background-color: transparent;
@@ -143,6 +181,18 @@ header{
     color: var(--secondary--color);
     border-color: var(--main--color);
 }
+
+
+/*color declaration for mode*/
+.dark-mode{
+    background-color: #111;
+    color: #fff;
+}
+.light-mode{
+    background-color: #fff;
+    color: #000;
+}
+
 
     /*Right home display*/
 .home .personal_container{
@@ -160,7 +210,6 @@ header{
     right: 0;
     width: 100%;
     height: 100%;
-    /* background-color: var(--main--color); */
     border-radius: 50%;
     display: flex;
     justify-content: center;
