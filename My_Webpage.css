@@ -10,7 +10,7 @@
 }
 
 
-/*Body display*/
+/*Body displays*/
 *{
     margin: 0;
     padding: 0;
@@ -41,11 +41,12 @@ header{
     cursor: pointer;
     text-decoration: none;
     font-weight: 600;
+    opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: 1s;
 }
 .navbar a{
-    color: var(--primary--color);
+    color: white;
     text-decoration: none;
     font-weight: 500;
     margin-right: 25px;
@@ -58,7 +59,7 @@ header{
     width: 100%;
     left: 0;
     height: 2.8px;
-    background-color: var(--primary--color);
+    background-color: white;
     content: '';
 }
 .navbar a::after{
@@ -97,6 +98,7 @@ header{
 }
 .home_content h3{
     font-size: 32px;
+    opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: .7s;
 }
@@ -104,12 +106,14 @@ header{
     font-size: 51px;
     color: var(--main--color);
     font-weight: 700;
+    opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: 1s;
 }
 .home_content p{
     font-size: 16px;
     margin-top: 3px;
+    opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
 }
@@ -127,13 +131,12 @@ header{
     text-decoration: none;
     margin: 25px 15px 30px 0;
     color: var(--secondary--color);
-    animation: slideLeftt 1s ease forwards;
-    animation-delay: 1s;
     animation: slideLeft 1s ease forwards;
-    animation-delay: 1s;
+    animation-delay: calc(.2s * var(--i));
 }
 
-/*Keyframes animation*/ 
+/********************Keyframes animation********************/ 
+
 @keyframes slideRight{
     0%{
         opacity: 0;
@@ -154,7 +157,17 @@ header{
         transform: translateX(0);
     }
 }
-
+@keyframes slideTop{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/************************************************************/
 
 .social_media a:hover{
     background-color: var(--main--color);
@@ -171,8 +184,9 @@ header{
     font-weight: 700;
     background-color: var(--main--color);
     box-shadow: 0px 2px 5px rgba(0, 0, 0, .2);
-    animation: slideLeft 1s ease forwards;
-    animation-delay: 1s;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    opacity: 0;
 }
 .button:hover{
     background-color: transparent;
@@ -183,17 +197,6 @@ header{
 }
 
 
-/*color declaration for mode*/
-.dark-mode{
-    background-color: #111;
-    color: #fff;
-}
-.light-mode{
-    background-color: #fff;
-    color: #000;
-}
-
-
     /*Right home display*/
 .home .personal_container{
     position: absolute;
@@ -201,7 +204,6 @@ header{
     top: 0;
     width: 770px;
     height: 770px;
-    /* background-color: var(--main--color); */
     overflow: hidden;
 }
 .personal_container .personal_box{
@@ -214,6 +216,9 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 2.5s;
 }
 .personal_box .tools{
     position: absolute;
@@ -253,6 +258,9 @@ header{
     border-bottom: 385px solid var(--main--color);
     border-left: 385px solid transparent;
     border-right: 385px solid var(--main--color);
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.5s;
 }
 .home_img{
     position: absolute;
@@ -260,6 +268,20 @@ header{
     bottom: 0;
     width: 100%;
     pointer-events: none;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 2.8s;
+}
+
+
+/*color declaration for mode*/
+.dark-mode{
+    --primary--color: #0b061f;
+    --secondary--color: #fff;
+}
+.light-mode{
+    background-color: #fff;
+    color: #000;
 }
 
 
