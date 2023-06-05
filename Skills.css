@@ -1,0 +1,97 @@
+/*Policy*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+
+/*Colors declaration*/
+:root{
+    --primary--color: #fff;
+    --secondary--color: #333;
+    --main--color: #f16a57;
+    --footer_text--color: #737373;
+    --footer--background: #f0f0f0;
+}
+
+/*Body displays*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: var(--primary--color);
+    overflow-x: hidden;
+    color: var(--secondary--color);
+}
+
+
+.skill{
+    padding: 60px 7% 0px;
+}
+.skills h4{
+    text-align: center;
+    font-size: 30px;
+    color: var(--main--color);
+    font-weight: 600;
+    cursor: pointer;
+}
+.main_skills{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+.main_skills .lang{
+    border: 1px solid;
+    border-radius: 5px;
+    /* padding: 50px 100px; */
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+    /*box-shadow: 1px 1px 25px var(--box_shadow--color); */
+}
+/* .main_skills .lang h3::after{
+    position: absolute;
+    content: '';
+    right: 0;
+    width: 0;
+    height: 2.8px;
+    background-color: var(--main--color);
+    border-radius: 8px;
+    transition: all ease 0.45s;
+}
+.main_skills div h3:hover::after{
+    width: 50%;
+} */
+.main_skills div h3{
+    text-align: center;
+    margin-top: 10px;
+    color: var(--secondary--color);
+}
+/* div .percent{
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.skill_title{
+    margin-top: 50px;
+}
+
+
+/***Media Query***/
+@media screen and (max-width: 1400px){
+    .main_skills .lang{
+        width: 300px;
+        height: 150px;
+        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 950px) {
+
+}

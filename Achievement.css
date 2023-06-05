@@ -1,0 +1,171 @@
+/*Policy*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+
+/*Colors declaration*/
+:root{
+    --primary--color: #fff;
+    --secondary--color: #333;
+    --main--color: #f16a57;
+    --footer_text--color: #737373;
+    --box_shadow--color: #0000004d;
+    --footer--background: rgb(245, 245, 245);
+}
+
+/*Body displays*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: var(--primary--color);
+    overflow-x: hidden;
+    color: var(--secondary--color);
+}
+
+/*****Achievement box*****/
+.achievement{
+    padding: 60px 7% 0px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+.achv{
+    display: grid;
+    place-items: center;
+}
+.achievement h4{
+    font-size: 30px;
+    color: var(--main--color);
+    font-weight: 600;
+    cursor: pointer;
+}
+.achievement h3{
+    color: #f16a51;
+}
+
+
+/*Container css*/
+.container{
+    width: 70%;
+    position: relative;
+    margin-top: 50px;
+}
+.container ul{
+    list-style: none;
+}
+.container ul::after{
+    content: ' ';
+    width: 2.3px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    z-index: 0;
+    position: absolute;
+    background-image: linear-gradient(to bottom, #f16a57, #f16f01);
+}
+.container ul li{
+    width: 50%;
+    background-color: var(--primary--color);
+    padding: 15px 20px;
+    box-shadow: 1px 1px 25px var(--box_shadow--color);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    z-index: 100;
+    position: relative;
+}
+.container ul li:nth-child(odd){
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    text-align: right;
+}
+.container ul li:nth-child(even){
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+}
+.container ul li:nth-child(3){
+    margin-bottom: 0;
+}
+.container ul li a{
+    font-size: 15px;
+    text-decoration: none;
+    color: #f16a11;
+}
+.container ul li .circle1{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(241, 106, 87, .53);
+}
+.container ul li .circle1::after{
+    content: ' ';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: var(--main--color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container ul li:nth-child(odd) .circle1{
+    right: -30px;
+    transform: translate(50%, -50%);
+}
+.container ul li:nth-child(even) .circle1{
+    left: -30px;
+    transform: translate(-50%, -50%);
+}
+
+
+/*Responsive Media Query*/
+@media screen and (max-width:1000px){
+    .container{
+        width: 90%;
+        transform: translate(15px);
+    }
+}
+@media screen and (max-width:850px){
+    .container{
+        width: 80%;
+    }
+    .container ul::after{
+        left: -30px;
+    }
+    .container ul li{
+        width: 100%;
+        float: none;
+        clear: none;
+        margin-bottom: 80px;
+    }
+    .container ul li:nth-child(odd){
+        transform: translateX(0);
+        text-align: left;
+    }
+    .container ul li:nth-child(even){
+        transform: translateX(0);
+    }
+    .container ul li:nth-child(odd) .circle1{
+        left: -30px;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+/*color declaration for mode*/
+.dark-mode{
+    --primary--color: #000;
+    --secondary--color: #fff;
+    --footer--background: rgba(30, 30, 30, .9);
+    --box_shadow--color: #ffffffe6;
+}
+.light-mode{
+    background-color: #fff;
+    color: #000;
+}
